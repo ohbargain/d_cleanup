@@ -5,7 +5,7 @@ from os import mkdir,listdir,chdir
 from datetime import datetime ,timedelta
 from shutil import move
 import sys
-import pdb
+#import pdb
 
 class DirMonthlyClenaup(object):
   def __init__(self,directory):
@@ -32,7 +32,6 @@ class DirMonthlyClenaup(object):
         res.setdefault(dir_name,[]).append(file)
 
     if res:
-      pdb.set_trace()
       for k, v in res.items():
         for file2 in v:
           move(file2, k)
